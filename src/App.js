@@ -1,25 +1,35 @@
-import logo from './logo.svg';
+import logo from './logo-webtech.jpeg';
 import './App.css';
+import Message from './Message';
+import Presentation from './Presentation';
+import Liste from './Liste';
+
+const styles = {
+  fontSize: 30,
+  color: "blue"
+}
+
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <Message />
+        <Presentation></Presentation>
+        <Liste prenoms={['Bruno', 'Romain', 'Julien', 'Jean']} />
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+        <p style={styles}>
+         Bienvenue WebTech à React :)
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <ul>
+          <li>Julien B. - Software Engineer</li>
+          <li>julien@taiwa.fr</li>
+        </ul>
       </header>
     </div>
   );
 }
 
 export default App;
+
+
